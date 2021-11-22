@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Roboto Mono:size=10";
-static int borderpx = 2;
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -96,32 +96,33 @@ unsigned int tabspaces = 8;
 /* Background opacity */
 float alpha = 0.9;
 
-/* Terminal colors (16 first used in escape sequence) */
+
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#080808",
-	"#e92f2f",
-	"#00db2f",
-	"#dddd13",
-	"#3b48e3",
-	"#cb0f9f",
-	"#008df7",
-	"#efefef",
-	"#343434",
-	"#e92f2f",
-	"#00db2f",
-	"#dddd13",
-	"#3b48e3",
-	"#cb0f9f",
-	"#008df7",
-	"#ffffff",
+        /* 8 normal colors */
+        "#000000",
+        "#ff2121",
+        "#00df2a",
+        "#ffff22",
+        "#3c3fef",
+        "#db0f9c",
+        "#006ef7",
+        "#efefef",
+        /* 8 bright colors */
+        "#111111",
+        "#ff2121",
+        "#00db2f",
+        "#dddd13",
+        "#3b48e3",
+        "#cb0f9f",
+        "#008df7",
+        "#ffffff",
+        [255] = 0,
+        /* more colors can be added after 255 to use with DefaultXX */
+        "#cccccc",
+        "#555555",
+        "black",
+																							};
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#efefef",
-	"#555555",
-};
 
 
 /*
